@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="static/style.css">
+
+</head>
+<body>
+    <div class="intro_dis">
+        <section class="block">
+        <div class="container">
+            <div class="section_header">
+            <h2 class="section_title">Question block</h2>
+        </div>
+            <hr>
+            <div class="section_header_lul">
+                <form action="/discus_com" method="post">
+                <input type="text" name="author" required="" class="input_reg" placeholder="Your name" /><br>
+                <textarea class="input_reg" name="text" required="" placeholder="Hold your question" cols="30" rows="10"></textarea><br>
+                <button type="submit">Hold comment</button>
+            </form>
+                </div>
+            <hr>
+{% if a %}
+          {%for i in a%}
+                <p>
+                    <strong class="section_title_dis">
+                        Author: {{i[0]}}
+                    </strong>
+                    <p>{{i[1]}}</p>
+                <p>{{i[2]}}</p>
+                </p>
+            <hr>
+          {% endfor %}
+     {% else %}
+       NO COMMENT BRO
+{% endif %}
+<hr>
+            <form>
+ <input type="button" value="Go back" onclick="history.back()" class="button_reg">
+</form>
+        </div>
+        </section>
+    </div>
+</body>
+</html>

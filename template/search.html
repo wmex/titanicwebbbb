@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+<div class="intro_search">
+        <section class="section">
+            <div class="container">
+       <div class="section_header">
+            <h2 class="section_title">List of founded people</h2>
+        </div>
+        <div class="services_search">
+            <div class="services_item">
+                <div class="services_title">{%for c in result%} {{c[0]}}<hr>{%endfor%}</div>
+                <div class="services_text"></div>
+            </div>
+            <div class="services_item">
+                <div class="services_title">{%for a in survived%} {{a[0]}}<hr>{%endfor%}</div>
+                <div class="services_text"></div>
+        </div>
+            <form>
+ <input type="button" value="Go back" onclick="history.back()" class="button_reg">
+</form>
+        </div>
+
+</section>
+        </div>
+</div>
+</body>
+</html>

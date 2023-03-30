@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="static/style.css">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/login.css') }}">
+</head>
+<body>
+    <div class="intro_login">
+        <div class="container">
+            <div class="section_header">
+            <h2 class="section_title">Registration</h2>
+        </div>
+
+            <form action="/registration_add" method="post" >
+                <div class="input_val">
+                    <input type="email" name="email" class="input_reg" placeholder="Write your email"
+                           />
+
+                    <input type="password" name="password" class="input_reg" placeholder="Create your password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                           />
+                    <div class="registr_text">Password requirements: minimum 1 uppercase, minimum 1 lowercase, minimum 1 number and overall 8 symbols</div>
+                    <br>
+                    <br>
+                    <button type="submit" class="button_reg">Registration</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+
